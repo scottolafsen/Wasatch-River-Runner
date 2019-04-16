@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/rivermap" component={RiverMap} />
-          <Route exact path="/profile" component={Profile} />
+          {/* <Route exact path="/profile" component={Profile} /> */}
           <Route component={NoMatch} />
         </Switch>
       </div>

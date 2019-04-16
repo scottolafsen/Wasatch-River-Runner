@@ -1,7 +1,6 @@
 import React from "react";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
-
+// import { Col, Row, Container } from "../components/Grid";
+import { Container, Row, Col, Jumbotron } from "reactstrap";
 function NoMatch() {
   return (
     <Container fluid>
