@@ -3,7 +3,6 @@ import { Table } from 'reactstrap';
 // import "./style.css";
 
 
-// RecipeList renders a bootstrap list item
 export function RiverTable({ children }) {
   return <Table>
   <thead>
@@ -11,7 +10,7 @@ export function RiverTable({ children }) {
       <th>River</th>
       <th>Section</th>
       <th>Difficulty</th>
-      <th>Level</th>
+      <th>CFS</th>
       <th>Updated</th>
     </tr>
   </thead>
@@ -20,21 +19,41 @@ export function RiverTable({ children }) {
   </tbody>
       </Table>
 }
-
+function getClassName (gauge, low, medium, high){
+  if (gauge === ""){
+    return 'no-gauge'
+  }
+  if (gauge <= low){
+    return 'lowest'
+  }
+  if (gauge > low && gauge < medium){
+    return 'low'
+  }
+  if (gauge >= medium && gauge < high){
+    return 'medium'
+  }
+  if (gauge >= high){
+    return 'high'
+  }
+  
+}
 // RecipeListItem renders a bootstrap list item containing data from the recipe api call
 export function RiverTableItem({
   riverName,
   section,
   difficulty,
   gauge,
-  updated
+  updated,
+  low,
+  medium, 
+  high
 }) {
   return (
-    <tr>
+    <tr className={getClassName(gauge, low, medium, high)}>
         <td>{riverName}</td>
         <td>{section}</td>
         <td>{difficulty}</td>
-        <td>{gauge}</td>
+        <td className="flow">{gauge}</td>
         <td>{updated}</td>
     </tr>
   );

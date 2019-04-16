@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 // import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
-import { Container, Row, Col, Jumbotron } from "reactstrap";
+import { Container } from "reactstrap";
 
 class RiverMap extends Component {
   state = {
