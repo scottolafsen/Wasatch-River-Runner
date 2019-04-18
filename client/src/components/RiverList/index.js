@@ -1,6 +1,8 @@
 import React from "react";
 import { Table } from 'reactstrap';
 // import "./style.css";
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 
 export function RiverTable({ children }) {
@@ -54,7 +56,7 @@ export function RiverTableItem({
         <td>{section}</td>
         <td>{difficulty}</td>
         <td className="flow">{gauge}</td>
-        <td>{updated}</td>
+        <td><Moment fromNow>{updated}</Moment></td>
     </tr>
   );
 }

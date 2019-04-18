@@ -10,8 +10,8 @@ export default {
     return axios.get("/api/books/" + id);
   },
   // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  deleteEvent: function(id) {
+    return axios.delete("/api/events/" + id);
   },
   // Saves a book to the database
   saveBook: function(bookData) {
@@ -19,5 +19,11 @@ export default {
   },
   getGauges: function() {
     return axios.get("http://waterservices.usgs.gov/nwis/iv/?stateCd=ny&format=json");
+  },
+  getEvents: function() {
+    return axios.get("/api/events");
+  },
+  saveEvent: function(eventData) {
+    return axios.post("/api/events", eventData);
   }
 };
