@@ -13,7 +13,8 @@ class ModalEventForm extends React.Component {
             description: "",
             date: "",
             link: "",
-            src: ""
+            src: "",
+            tags: []
         };
         this.toggle = this.toggle.bind(this);
     }
@@ -37,7 +38,8 @@ class ModalEventForm extends React.Component {
                     description: "",
                     date: "",
                     link: "",
-                    src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t31.0-8/12113351_10102660054117079_3409658635737573702_o.jpg?_nc_cat=110&_nc_ht=scontent-sjc3-1.xx&oh=a6d229228e0ff9b7716a4a97e17c0fdd&oe=5D317E64"
+                    src: "",
+                    tags: []
                 }))
             .catch(err => console.log(err));
     };
@@ -63,7 +65,8 @@ class ModalEventForm extends React.Component {
                 description: this.state.description,
                 date: this.state.date,
                 link: this.state.link,
-                src: this.state.src
+                src: this.state.src,
+                tags: this.state.tags
             })
                 .then(res => this.loadEvents())
                 .catch(err => console.log(err));
@@ -131,6 +134,17 @@ class ModalEventForm extends React.Component {
                                         placeholder="url placeholder"
                                     />
                                 </FormGroup>
+                                <FormGroup>
+                                    <Label for="exampleSelect">Event Tags</Label>
+                                    <Input type="select" name="tags" id="eventTags">
+                                        <option>Race</option>
+                                        <option>UWC</option>
+                                        <option>Trips</option>
+                                        <option>Release</option>
+                                        <option>Meeting</option>
+                                        <option>Pool</option>
+                                    </Input>
+                                </FormGroup>
                             </Form>
                         </ModalBody>
                         <ModalFooter>
@@ -153,6 +167,7 @@ class ModalEventForm extends React.Component {
                                         link={event.link}
                                         src={event.src}
                                         id={event._id}
+                                        tags={event.tags[0]}
                                         deleteEvent={() => this.deleteEvent(event._id)}
                                     />
                                 );
