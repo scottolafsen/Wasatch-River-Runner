@@ -3,6 +3,7 @@ import { Table } from 'reactstrap';
 // import "./style.css";
 import Moment from 'react-moment';
 import 'moment-timezone';
+import GaugeModal from '../GaugeModal'
 
 
 export function RiverTable({ children }) {
@@ -48,14 +49,22 @@ export function RiverTableItem({
   updated,
   low,
   medium, 
-  high
+  high,
+  id,
+  title,
+  data
 }) {
   return (
     <tr className={getClassName(gauge, low, medium, high)}>
         <td>{riverName}</td>
         <td>{section}</td>
         <td>{difficulty}</td>
-        <td className="flow">{gauge}</td>
+        <td><GaugeModal 
+        buttonLabel={gauge}
+        data={data}
+        title={title}
+        />
+        </td>
         <td><Moment fromNow>{updated}</Moment></td>
     </tr>
   );

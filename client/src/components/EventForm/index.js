@@ -1,13 +1,17 @@
 import React from 'react';
 import EventListItem from "../EventList";
 import API from "/Users/Scott/UofU/project3/client/src/utils/API";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Form, Col, Row } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Form, Container, Row } from 'reactstrap';
+import EventDropdown from "../EventDropdown";
+import "./style.css";
+
 
 class ModalEventForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             modal: false,
+            tmpEvents: [],
             events: [],
             title: "",
             description: "",
@@ -33,7 +37,10 @@ class ModalEventForm extends React.Component {
         API.getEvents()
             .then(res =>
                 this.setState({
-                    events: res.data,
+                    events: res.data.sort(function(a,b){
+                        return new Date(a.date) - new Date(b.date);
+                      }),
+                    tmpEvents: res.data,
                     title: "",
                     description: "",
                     date: "",
@@ -41,7 +48,20 @@ class ModalEventForm extends React.Component {
                     src: "",
                     tags: []
                 }))
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
+            
+    };
+
+    eventTag = (tag) => {
+        let events = this.state.tmpEvents
+        let sortedEvents = events.sort(function(a,b){
+            return new Date(a.date) - new Date(b.date);
+          })
+        const eventsTag = sortedEvents.filter(event => event.tags[0] === tag || event.tags[1] === tag);
+        this.setState({
+            events: eventsTag
+        })
+        console.log(this.state.events);
     };
 
     deleteEvent = id => {
@@ -75,9 +95,15 @@ class ModalEventForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="events-wrapper">
+                <Container className="events-container">
                 <Row>
+                    <EventDropdown 
+                    loadEvents={this.loadEvents}
+                    eventTag={this.eventTag}
+                    />
                     <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}Create Event</Button>
+                    <h4 className="event-title">Intermountain Whitewater Events</h4>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                         <ModalBody>
@@ -136,7 +162,12 @@ class ModalEventForm extends React.Component {
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="exampleSelect">Event Tags</Label>
-                                    <Input type="select" name="tags" id="eventTags">
+                                    <Input 
+                                    value={this.state.tags}
+                                    onChange={this.handleInputChange}
+                                    type="select" 
+                                    name="tags" 
+                                    id="eventTags">
                                         <option>Race</option>
                                         <option>UWC</option>
                                         <option>Trips</option>
@@ -167,13 +198,14 @@ class ModalEventForm extends React.Component {
                                         link={event.link}
                                         src={event.src}
                                         id={event._id}
-                                        tags={event.tags[0]}
+                                        tags={event.tags}
                                         deleteEvent={() => this.deleteEvent(event._id)}
                                     />
                                 );
                             })
                         )}
                 </Row>
+                </Container>
             </div>
         );
     }

@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/wasatchriver"
 );
 
-const eventSeeds = [
+const eventSeed = [
   {
     title: "Green River Daily - Campsite Swasey's" ,
     description: "This is the NOOBIE trip, or dusting off the cob-webs from the winter. A great way to start off the season, and getting people used to big water. Camping will be at Swasey's campsite from Friday night 4-26 to Sunday 4-28. Cost is $5 per-person per night for camping and Non-members an additional $10 which will include an ACA wavier. Coordinator: Dustin Judd ",
@@ -112,13 +112,12 @@ const eventSeeds = [
     link: "http://www.pacificorp.com/content/dam/pacificorp/doc/Energy_Sources/Hydro/Hydro_Licensing/Bear_River/ECC/2019_BC_WW_Boater_Flow_Schedule.pdf",
     src: "",
     tags: ["Release"],
-  },
-
+  }
 ];
 
 db.Event
   .remove({})
-  .then(() => db.Event.collection.insertMany(eventSeeds))
+  .then(() => db.Event.collection.insertMany(eventSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

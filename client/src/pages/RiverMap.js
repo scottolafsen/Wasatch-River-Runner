@@ -1,28 +1,36 @@
-import React, { Component } from "react";
-
-// import { Col, Row, Container } from "../components/Grid";
-import API from "../utils/API";
-import { Container } from "reactstrap";
-
-class RiverMap extends Component {
-  state = {
-    book: {}
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
+ 
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+ 
+class SimpleMap extends Component {
+  static defaultProps = {
+    center: {
+      lat: 40.742622,
+      lng: -111.879672
+    },
+    zoom: 11
   };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
-  componentDidMount() {
-    API.getBook(this.props.match.params.id)
-      .then(res => this.setState({ book: res.data }))
-      .catch(err => console.log(err));
-  }
-
+ 
   render() {
     return (
-      <Container fluid>
-       
-      </Container>
+      // Important! Always set the container height explicitly
+      <div style={{ height: '100vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyCkQ5opRCGyG7jH62BQBCnbcN3ZVNgc6r8"
+          }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+          <AnyReactComponent
+            lat={40.742622}
+            lng={-111.879672}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
     );
   }
 }
-
-export default RiverMap;
+ 
+export default SimpleMap;

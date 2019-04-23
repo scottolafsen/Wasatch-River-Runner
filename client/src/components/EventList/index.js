@@ -1,5 +1,5 @@
 import React from "react";
-import { Media, Button } from 'reactstrap';
+import { Media, Button} from 'reactstrap';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import "./style.css";
@@ -11,20 +11,28 @@ export default function EventListItem({
   date,
   description,
   deleteEvent,
-  id
+  id, 
+  tags
 }) {
   return (
-    <Media>
+    <Media className="event">
+      
       <Media left href={link}>
         <Media object className="img" src={src} alt="Generic placeholder image" />
-      </Media>
+        <Media><Moment fromNow>{date}</Moment>
+        {"Tags" + tags[0] + tags[1]}
+        </Media>
+        </Media>
+       
       <Media body>
+      <Media heading>
+      <Moment format="MMMM Do YYYY">{date}</Moment>
+      </Media>
         <Media heading>
           {title}
-          <Moment format="MMMM Do YYYY">{date}</Moment>
-        </Media>
+          </Media>
         {description}
-        <Moment fromNow>{date}</Moment>
+        
         <Button outline color="danger" onClick={() => deleteEvent(id)}>X</Button>
       </Media>
     </Media>
