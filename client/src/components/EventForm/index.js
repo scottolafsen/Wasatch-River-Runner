@@ -1,6 +1,6 @@
 import React from 'react';
 import {EventListItem, EventList} from "../EventList";
-import API from "/Users/Scott/UofU/project3/client/src/utils/API";
+import API from '../utils/API';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Form, Container, Row } from 'reactstrap';
 import EventDropdown from "../EventDropdown";
 import "./style.css";

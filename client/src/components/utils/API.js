@@ -27,10 +27,10 @@ export default {
     return axios.post("/api/events", eventData);
   },
  
-  getRiver: function() {
-    return axios.get("/api/rivers/" + id);
-  },
-  saveRiver: function(riverData) {
-    return axios.post("/api/rivers" + id, riverData);
-  }
+  // getRiver: function() {
+  //   return axios.get("/api/rivers/" + id);
+  // },
+  // saveRiver: function(riverData) {
+  //   return axios.post("/api/rivers" + id, riverData);
+  // }
 };
