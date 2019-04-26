@@ -1,6 +1,5 @@
 import rivers from "../pages/dashboard-rivers.json";
 import axios from "axios";
-import MapItem from "../components/mapItem";
 import MapModal from "../components/MapModal";
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';

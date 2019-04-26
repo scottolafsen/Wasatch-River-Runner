@@ -98,7 +98,7 @@ class ModalEventForm extends React.Component {
             <div className="events-wrapper">
                 <Container className="events-container">
                 <Row>
-                <h4 className="event-title">Intermountain Whitewater Events    </h4>
+                <h4 className="event-title">Intermountain Whitewater Events</h4>
                     <EventDropdown 
                     loadEvents={this.loadEvents}
                     eventTag={this.eventTag}
@@ -106,7 +106,7 @@ class ModalEventForm extends React.Component {
                     <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}Create Event</Button>
                     
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                        <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                        <ModalHeader toggle={this.toggle}>Add a Whitewater Event!</ModalHeader>
                         <ModalBody>
                             <Form>
                                 <FormGroup>

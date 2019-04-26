@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import API from "../utils/API";
 import axios from "axios";
 // import { Link } from "react-router-dom";
-import { Container, Row, Col } from "reactstrap";
+import { Container} from "reactstrap";
 import { RiverTable, RiverTableItem } from "../components/RiverList";
 import rivers from "../pages/dashboard-rivers.json";
 
