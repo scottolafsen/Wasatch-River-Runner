@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
+
 
 mongoose.connect(
   process.env.MONGODB_URI ||
@@ -15,7 +15,7 @@ const eventSeed = [
     date: "2019-04-27T00:00:00.000Z",
     link: "https://www.facebook.com/events/340182873286118/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/53604798_2149668768451134_8604950111199428608_n.jpg?_nc_cat=100&_nc_ht=scontent-sjc3-1.xx&oh=bb427f4c98b3a5ddcf0f40b8279c39c5&oe=5D3E6D12",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Moab Daily - Camping at Lower Onion Creek Campgound " ,
@@ -23,7 +23,7 @@ const eventSeed = [
     date: "2019-05-18T00:00:00.000Z",
     link: "https://www.facebook.com/events/312293262802582/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/53514146_2150094451741899_8453268466353307648_n.jpg?_nc_cat=103&_nc_ht=scontent-sjc3-1.xx&oh=e85f1374cff00f36ffee7fafecbdcabc&oe=5D3BB752",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Hoback, Greys, Granite Creek - Campsite Kozy Campground" ,
@@ -31,7 +31,7 @@ const eventSeed = [
     date: "2019-06-15T00:00:00.000Z",
     link: "https://www.facebook.com/events/326261104912595/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/54257214_2150132588404752_6426740271458811904_n.jpg?_nc_cat=103&_nc_ht=scontent-sjc3-1.xx&oh=06bb9bb391195cddd366c99bf1811831&oe=5D42D299",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Sevier River - Castle Rock Campground" ,
@@ -39,7 +39,7 @@ const eventSeed = [
     date: "2019-06-29T00:00:00.000Z",
     link: "https://www.facebook.com/events/339049320059421/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/54257214_2150132588404752_6426740271458811904_n.jpg?_nc_cat=103&_nc_ht=scontent-sjc3-1.xx&oh=06bb9bb391195cddd366c99bf1811831&oe=5D42D299",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Payette Rivers - Hot Springs Campground " ,
@@ -47,7 +47,7 @@ const eventSeed = [
     date: "2019-07-24T00:00:00.000Z",
     link: "https://www.facebook.com/events/797163493993104/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/53898189_2150161838401827_7685348470110027776_n.jpg?_nc_cat=106&_nc_ht=scontent-sjc3-1.xx&oh=7c40e76ae345715595689cdec4590839&oe=5D4250E8",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Alpine Canyon, Snake River - Campground: Alpine North Loop" ,
@@ -55,7 +55,7 @@ const eventSeed = [
     date: "2019-08-15T00:00:00.000Z",
     link: "http://www.utahwhitewaterclub.org/upcoming-trips",
     src: "",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "American River, CA" ,
@@ -63,7 +63,7 @@ const eventSeed = [
     date: "2019-08-28T00:00:00.000Z",
     link: "https://www.facebook.com/events/345925226026845/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/53873332_2150179485066729_6477971195416281088_n.jpg?_nc_cat=101&_nc_ht=scontent-sjc3-1.xx&oh=ce3e3a01295645c94d69d85ee46d974f&oe=5D2AAD5A",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Snake River, Hagerman section" ,
@@ -71,7 +71,7 @@ const eventSeed = [
     date: "2019-09-27T00:00:00.000Z",
     link: "https://www.facebook.com/events/345925226026845/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/53873332_2150179485066729_6477971195416281088_n.jpg?_nc_cat=101&_nc_ht=scontent-sjc3-1.xx&oh=ce3e3a01295645c94d69d85ee46d974f&oe=5D2AAD5A",
-    tags: ["UWC", "Trips"],
+    tags: ["UWC", "Trips"]
   },
   {
     title: "Provo River Race" ,
@@ -79,7 +79,7 @@ const eventSeed = [
     date: "2019-05-19T00:00:00.000Z",
     link: "https://www.facebook.com/events/bridal-veil-falls/provo-river-race/395609650910638/",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/31271213_1715335725226424_2991387278815072704_n.jpg?_nc_cat=109&_nc_ht=scontent-sjc3-1.xx&oh=f4f4b246e636fa621e1a7041258bab3f&oe=5D442A97",
-    tags: ["Race"],
+    tags: ["Race"]
   },
   {
     title: "Wyoming Whitewater CHampionships" ,
@@ -87,7 +87,7 @@ const eventSeed = [
     date: "2019-06-01T00:00:00.000Z",
     link: "http://www.jhkayakclub.org/wwc",
     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/31271213_1715335725226424_2991387278815072704_n.jpg?_nc_cat=109&_nc_ht=scontent-sjc3-1.xx&oh=f4f4b246e636fa621e1a7041258bab3f&oe=5D442A97",
-    tags: ["Race"],
+    tags: ["Race"]
   },
   {
     title: "CKS Paddlefest" ,
@@ -95,7 +95,7 @@ const eventSeed = [
     date: "2019-05-23T00:00:00.000Z",
     link: "https://www.ckspaddlefest.com/",
     src: "https://static.wixstatic.com/media/60bf0f_42173841e5314b3e9845421055a35ddf~mv2_d_2800_1869_s_2.jpg/v1/crop/x_0,y_0,w_2800,h_1310/fill/w_1175,h_550,al_c,q_85,usm_0.66_1.00_0.01/Paddlefest%202017%20LR047.webp",
-    tags: ["Race"],
+    tags: ["Race"]
   },
   {
     title: "Bear River Black Canyon Release" ,
@@ -103,7 +103,7 @@ const eventSeed = [
     date: "2019-05-11T00:00:00.000Z",
     link: "http://www.pacificorp.com/content/dam/pacificorp/doc/Energy_Sources/Hydro/Hydro_Licensing/Bear_River/ECC/2019_BC_WW_Boater_Flow_Schedule.pdf",
     src: "",
-    tags: ["Release"],
+    tags: ["Release"]
   },
   {
     title: "Bear River Black Canyon Release" ,
@@ -111,7 +111,7 @@ const eventSeed = [
     date: "2019-04-26T00:00:00.000Z",
     link: "http://www.pacificorp.com/content/dam/pacificorp/doc/Energy_Sources/Hydro/Hydro_Licensing/Bear_River/ECC/2019_BC_WW_Boater_Flow_Schedule.pdf",
     src: "",
-    tags: ["Release"],
+    tags: ["Release"]
   }
 ];
 
