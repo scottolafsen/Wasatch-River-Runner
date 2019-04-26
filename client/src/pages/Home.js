@@ -49,7 +49,7 @@ class Home extends Component {
         })
         console.log(this.state.dashRivers)
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   };
 
 
@@ -74,6 +74,7 @@ class Home extends Component {
                     high={river.high}
                     data={river.modal}
                     title={river.gaugeName}
+                    id={river.id}
                   />
                 );
               })}

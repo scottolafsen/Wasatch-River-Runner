@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/rivermap" component={RiverMap} />
-          <Route exact path="/rivers/:id" component={River} />
+          <Route exact path="/:id" component={River} />
           <Route component={NoMatch} />
         </Switch>
       </div>

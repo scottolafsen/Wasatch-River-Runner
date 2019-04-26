@@ -1,0 +1,19 @@
+#lowest {
+    background-color: rgb(250, 2, 2);
+}
+
+#low {
+    background-color: rgba(250, 184, 62, 0.4);
+}
+
+#medium {
+    background-color: rgba(0, 255, 26, 0.6);
+}
+
+#high {
+    background-color: rgb(58, 9, 236, 0.4);
+}
+
+#no-gauge {
+    background-color: rgb(186, 185, 189, 0.4);
+}

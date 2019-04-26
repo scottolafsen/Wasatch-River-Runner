@@ -1,5 +1,5 @@
 import React from 'react';
-import EventListItem from "../EventList";
+import {EventListItem, EventList} from "../EventList";
 import API from "/Users/Scott/UofU/project3/client/src/utils/API";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Form, Container, Row } from 'reactstrap';
 import EventDropdown from "../EventDropdown";
@@ -98,12 +98,13 @@ class ModalEventForm extends React.Component {
             <div className="events-wrapper">
                 <Container className="events-container">
                 <Row>
+                <h4 className="event-title">Intermountain Whitewater Events    </h4>
                     <EventDropdown 
                     loadEvents={this.loadEvents}
                     eventTag={this.eventTag}
                     />
                     <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}Create Event</Button>
-                    <h4 className="event-title">Intermountain Whitewater Events</h4>
+                    
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                         <ModalBody>
@@ -188,7 +189,8 @@ class ModalEventForm extends React.Component {
                     {this.state.events === [] ? (
                         <h1 className="text-center">No Events to Display</h1>
                     ) : (
-                            this.state.events.map(event => {
+                        <EventList>
+                            {this.state.events.map(event => {
                                 return (
                                     <EventListItem
                                         key={event._id}
@@ -199,10 +201,12 @@ class ModalEventForm extends React.Component {
                                         src={event.src}
                                         id={event._id}
                                         tags={event.tags}
+                                        thumbnail={event.src}
                                         deleteEvent={() => this.deleteEvent(event._id)}
                                     />
                                 );
-                            })
+                            })}
+                            </EventList>
                         )}
                 </Row>
                 </Container>
