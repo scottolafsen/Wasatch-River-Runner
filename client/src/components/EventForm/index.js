@@ -98,12 +98,13 @@ class ModalEventForm extends React.Component {
             <div className="events-wrapper">
                 <Container className="events-container">
                 <Row>
-                <h4 className="event-title">Intermountain Whitewater Events</h4>
+                    <div className="clearfix">
+                <h2 className="text-center event-title">Intermountain Whitewater Events</h2>
                     <EventDropdown 
                     loadEvents={this.loadEvents}
                     eventTag={this.eventTag}
                     />
-                    <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}Create Event</Button>
+                    <Button className="btn btn-secondary float-left"color="success" onClick={this.toggle}>{this.props.buttonLabel}Create Event</Button>
                     
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Add a Whitewater Event!</ModalHeader>
@@ -184,8 +185,9 @@ class ModalEventForm extends React.Component {
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>
                     </Modal>
+                    </div>
                 </Row>
-                <Row>
+                <Row className='events-container'>
                     {this.state.events === [] ? (
                         <h1 className="text-center">No Events to Display</h1>
                     ) : (

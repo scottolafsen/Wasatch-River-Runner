@@ -6,9 +6,7 @@ import { Container, Row, Col } from "reactstrap";
 import { RiverTable, RiverTableItem } from "../components/RiverList";
 import rivers from "../pages/dashboard-rivers.json";
 import ModalEventForm from "../components/EventForm";
-// import GaugeModal from "../components/GaugeModal";
-// import Moment from 'react-moment';
-// import 'moment-timezone';
+import "./style.css";
 
 
 class Home extends Component {
@@ -56,7 +54,7 @@ class Home extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="background">
         <Row>
           <Col>
             <RiverTable>

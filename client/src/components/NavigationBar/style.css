@@ -1,11 +1,11 @@
-h1 {
+h1, h4 {
     color: rgb(233, 233, 235);
     float: right;
     align-content: flex-end;
     
 }
-.nav {
-    background-color: rgb(74, 74, 75);
+.navbar {
+    background-color: rgb(6, 6, 61);
 }
 
 .lowest {
@@ -13,19 +13,19 @@ h1 {
 }
 
 .low {
-    background-color: rgba(250, 184, 62, 0.4);
+    background-color: rgba(250, 184, 62, 0.9);
 }
 
 .medium {
-    background-color: rgba(0, 255, 26, 0.6);
+    background-color: rgba(0, 255, 26, 0.9);
 }
 
 .high {
-    background-color: rgb(58, 9, 236, 0.4);
+    background-color: rgb(58, 9, 236, 0.9);
 }
 
 .no-gauge {
-    background-color: rgb(186, 185, 189, 0.4);
+    background-color: rgb(186, 185, 189, 0.9);
 }
 
 .flow {
@@ -35,4 +35,11 @@ h1 {
 }
 td {
     /* font-weight: bold; */
+}
+.app-name {
+    float: right;
+}
+
+#river {
+    padding-right: 100px;
 }

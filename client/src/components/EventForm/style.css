@@ -1,10 +1,12 @@
-.events-wrapper {
-    background-color: rgb(7, 7, 7);
+.events-container {
+    background-color: rgba(14, 13, 13, 0.7);
     border-width: 50px;
     border-color: black;
 }
 .event-title {
     color: whitesmoke;
+    padding-left: 33%;
+    font-weight: bold;
 }
 
 Button {

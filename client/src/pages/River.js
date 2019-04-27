@@ -5,6 +5,7 @@ import axios from "axios";
 import { Container} from "reactstrap";
 import { RiverTable, RiverTableItem } from "../components/RiverList";
 import rivers from "../pages/dashboard-rivers.json";
+import "./style.css";
 
 
 class River extends Component {
@@ -40,7 +41,7 @@ class River extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="background">
      <RiverTable>
               {this.state.riverInfo.map(river => {
                 return (

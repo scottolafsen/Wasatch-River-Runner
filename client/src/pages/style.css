@@ -1,0 +1,8 @@
+
+.background {
+    background-image: url("../components/images/hades.jpg");
+    background-repeat: repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 2000px 1500px;
+  }

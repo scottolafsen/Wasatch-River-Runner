@@ -21,13 +21,14 @@ export function EventListItem({
   tags
 }) {
   return (
-    <li className="list-group-item">
+    <li className="list-group-item" id="event-item">
     <Container>
       <Row>
-        <Col size="xs-4 sm-2">
+        <Col xs="4" sm="2" md="3" lg="4">
           <Thumbnail src={thumbnail} />
+          <h3><Moment fromNow>{date}</Moment></h3>
         </Col>
-        <Col size="xs-8 sm-9">
+        <Col s="8" sm="9" md="9" lg="8">
           
           <Button outline color="danger" onClick={() => deleteEvent(id)}>X</Button>
           <h3>{title}</h3>

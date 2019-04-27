@@ -11,3 +11,7 @@
     border-block-end-color: black;
   
 }
+ #event-item {
+    background-color: rgb(186, 185, 189, 0.3);
+    color: whitesmoke;
+ }

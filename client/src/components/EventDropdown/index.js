@@ -20,7 +20,7 @@ export default class EventDropdown extends React.Component {
   render() {
     return (
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
+        <DropdownToggle className="float-left" caret>
           Event Tags
         </DropdownToggle>
         <DropdownMenu>
