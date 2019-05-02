@@ -10,9 +10,12 @@ class SimpleMap extends Component {
     center: {
       lat: 41.23181944,
       lng: -111.9844972,
-      gauges: []
+      gauges: [],
+      mapTypeId: "terrain"
     },
-    zoom: 11
+    zoom: 11,
+    
+    
   };
   state = {
     gauges: []
@@ -66,6 +69,7 @@ class SimpleMap extends Component {
           bootstrapURLKeys={{ key: 'AIzaSyCkQ5opRCGyG7jH62BQBCnbcN3ZVNgc6r8' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
+          mapTypeId= {this.props.mapTypeId}
         >
           {this.state.gauges.map(gauge => {
             return (

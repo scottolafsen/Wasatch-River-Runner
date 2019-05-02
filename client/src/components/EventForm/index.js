@@ -141,12 +141,12 @@ class ModalEventForm extends React.Component {
                                     />
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label for="eventLink">Link</Label>
+                                    <Label for="exampleLink">Link</Label>
                                     <Input
                                         type="textarea"
                                         value={this.state.link}
                                         onChange={this.handleInputChange}
-                                        name="url"
+                                        name="link"
                                         id="eventLink"
                                         placeholder="link"
                                     />

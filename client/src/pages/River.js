@@ -41,7 +41,8 @@ class River extends Component {
 
   render() {
     return (
-      <Container fluid className="background">
+      <Container fluid className="background"
+      >
      <RiverTable>
               {this.state.riverInfo.map(river => {
                 return (
