@@ -13,7 +13,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Highway 34",
+            "lat": "42.586091",
+            "long": "-111.729484"
+        },
+        "takeOut" : {
+            "name": "Grace Power Plant",
+            "lat": "42.543304",
+            "long": "-111.799074"
+        }
     },
     {
         "id": 2,
@@ -29,7 +39,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Oneida Powerhouse",
+            "lat": "42.263868",
+            "long": "-111.752387"
+        },
+        "takeOut" : {
+            "name": "Highway 36",
+            "lat": "42.193223",
+            "long": "-111.778156"
+        }
     },
     {
         "id": 3,
@@ -45,7 +65,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Rick's Springs",
+            "lat": "41.839967",
+            "long": "-111.588300"
+        },
+        "takeOut" : {
+            "name": "Preston Valley Campground",
+            "lat": "41.773396",
+            "long": "-111.654439"
+        }
     },
     {
         "id": 4,
@@ -61,7 +91,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Smokey The Bear Sign",
+            "lat": "41.240509",
+            "long": "-111.903758"
+        },
+        "takeOut" : {
+            "name": "Rainbow Gardens",
+            "lat": "41.236035",
+            "long": "-111.928039"
+        }
     },
     {
         "id": 5,
@@ -77,7 +117,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Rainbow Gardens",
+            "lat": "41.236035",
+            "long": "-111.928039"
+        },
+        "takeOut" : {
+            "name": "Lorin Farr",
+            "lat": "41.236414",
+            "long": "-111.960132"
+        }
     },
     {
         "id": 6,
@@ -93,7 +143,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Henefer",
+            "lat": "41.041810",
+            "long": "-111.517532"
+        },
+        "takeOut" : {
+            "name": "Taggarts Falls",
+            "lat": "41.058352",
+            "long": "-111.591371"
+        }
     },
     {
         "id": 7,
@@ -109,7 +169,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Weber Canyon Rest Area",
+            "lat": "41.139015",
+            "long": "-111.852392"
+        },
+        "takeOut" : {
+            "name": "Diversion Dam",
+            "lat": "41.137294",
+            "long": "-111.885888"
+        }
     },
     {
         "id": 8,
@@ -125,7 +195,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Top of Play Park",
+            "lat": "41.209619",
+            "long": "-111.991345"
+        },
+        "takeOut" : {
+            "name": "Bottom of Play Park",
+            "lat": "41.211316",
+            "long": "-111.991969"
+        }
     },
     {
         "id": 9,
@@ -141,7 +221,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Upper Provo Falls",
+            "lat": "40.657629",
+            "long": "-110.945833"
+        },
+        "takeOut" : {
+            "name": "Cobblerest Campground",
+            "lat": "40.594501",
+            "long": "-110.975275"
+        }
     },
     {
         "id": 10,
@@ -157,7 +247,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Olmstead Diversion Dam",
+            "lat": "40.348194",
+            "long": "-111.589603"
+        },
+        "takeOut" : {
+            "name": "Mt Timpanogos Park",
+            "lat": "40.325505",
+            "long": "-111.643200"
+        }
     },
     {
         "id": 11,
@@ -173,7 +273,17 @@
         "modal": [],
         "gaugeName": "",
         "gaugeLat": "",
-        "gaugeLong": ""
+        "gaugeLong": "",
+        "putIn" : {
+            "name": "Temple Quarry",
+            "lat": "40.571954",
+            "long": "-111.774913"
+        },
+        "takeOut" : {
+            "name": "Quail Hollow",
+            "lat": "40.578354",
+            "long": "-111.797403"
+        }
     }
 ]
     

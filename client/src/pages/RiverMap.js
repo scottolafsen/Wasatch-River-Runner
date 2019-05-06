@@ -3,6 +3,8 @@ import axios from "axios";
 import MapModal from "../components/MapModal";
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import PutinModal from "../components/Putin";
+import TakeoutModal from "../components/Takeout";
 
 
 class SimpleMap extends Component {
@@ -64,7 +66,7 @@ class SimpleMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '90vh', width: '80%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyCkQ5opRCGyG7jH62BQBCnbcN3ZVNgc6r8' }}
           defaultCenter={this.props.center}
@@ -88,6 +90,34 @@ class SimpleMap extends Component {
                 data={gauge.modal}
                 id={gauge.id}
                 gaugeName={gauge.gaugeName}
+              />
+            );
+          })}
+          {this.state.gauges.map(gauge => {
+            return (
+              <PutinModal
+                key={gauge.gaugeId}
+                lat={gauge.putIn.lat}
+                lng={gauge.putIn.long}
+                name={gauge.putIn.name}
+                id={gauge.id}
+                section={gauge.section}
+                difficulty={gauge.difficulty}
+                riverName={gauge.riverName}
+              />
+            );
+          })}
+          {this.state.gauges.map(gauge => {
+            return (
+              <TakeoutModal
+                key={gauge.gaugeId}
+                lat={gauge.takeOut.lat}
+                lng={gauge.takeOut.long}
+                name={gauge.takeOut.name}
+                id={gauge.id}
+                section={gauge.section}
+                difficulty={gauge.difficulty}
+                riverName={gauge.riverName}
               />
             );
           })}

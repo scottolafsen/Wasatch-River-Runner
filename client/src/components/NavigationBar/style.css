@@ -1,11 +1,12 @@
-h1, h4 {
-    color: rgb(233, 233, 235);
+h1, h5 {
+    color: rgb(42, 4, 59);
     float: right;
     align-content: flex-end;
+    /* background-color: aquamarine; */
     
 }
 .navbar {
-    background-color: rgb(6, 6, 61);
+    background-color: rgb(252, 252, 252, 0.5);
 }
 
 .lowest {
@@ -42,4 +43,8 @@ td {
 
 #river {
     padding-right: 100px;
+}
+img {
+    width: 40%;
+    height: 40%;
 }

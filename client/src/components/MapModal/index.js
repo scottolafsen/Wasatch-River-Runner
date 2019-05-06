@@ -46,14 +46,14 @@ class MapModal extends React.Component {
     return (
       <div>
         <Button id={this.getClassName(this.props.gauge, this.props.low, this.props.medium, this.props.high)} color="primary" onClick={this.toggle}>{this.props.gauge} cfs</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} size="lg">
+        <Modal isOpen={this.state.modal} toggle={this.toggle} size="sm">
         <Card body id={this.getClassName(this.props.gauge, this.props.low, this.props.medium, this.props.high)}>
     <CardTitle><Link to={"/" + this.props.id}>
         <strong>
-          {this.props.riverName}
+          {this.props.riverName + " " + this.props.section + "  Class: " + this.props.difficulty}
         </strong>
       </Link></CardTitle>
-    <CardText>{this.props.section + "  Class: " + this.props.difficulty}</CardText>
+    <CardText> <strong>{"Gauge Name:  " + this.props.gaugeName}</strong></CardText>
     <GaugeModal
         buttonLabel={this.props.gauge}
         data={this.props.data}
@@ -61,6 +61,7 @@ class MapModal extends React.Component {
       />
   </Card>
   <ModalFooter>
+  
             <Button color="secondary" onClick={this.toggle}>Close</Button>
           </ModalFooter>
         </Modal>
