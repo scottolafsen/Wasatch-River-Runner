@@ -7,6 +7,7 @@ import { RiverTable, RiverTableItem } from "../components/RiverList";
 import rivers from "../pages/dashboard-rivers.json";
 import ModalEventForm from "../components/EventForm";
 import "./style.css";
+import Moment from 'react-moment';
 
 
 class Home extends Component {
@@ -21,7 +22,7 @@ class Home extends Component {
   }
 
   setGauges() {
-    axios.get("https://waterservices.usgs.gov/nwis/iv?format=json&sites=10016900,10092700,10168000,10109000,10140100,10140700,10154200,10149000,10137500,10132000,10136500,10137000&parameterCd=00060&period=P7D")
+    axios.get("https://waterservices.usgs.gov/nwis/iv?format=json&sites=10016900,10092700,10168000,10109000,10140100,10140700,10154200,10149000,10137500,10132000,10136500,10137000,10163000&parameterCd=00060&period=P7D")
       .then(res => {
         let data = res.data.value.timeSeries
         let gauges = data.map(gauge => ({
@@ -65,14 +66,15 @@ class Home extends Component {
                     riverName={river.riverName}
                     section={river.section}
                     difficulty={river.difficulty}
-                    gauge={river.level}
-                    updated={river.updated}
+                    level={river.level}
+                    updated={river.updated !== "" ? <Moment fromNow>{river.updated}</Moment> : "no gauge"}
                     low={river.low}
                     medium={river.medium}
                     high={river.high}
                     data={river.modal}
                     title={river.gaugeName}
                     id={river.id}
+                    gauge={river.gauge}
                   />
                 );
               })}

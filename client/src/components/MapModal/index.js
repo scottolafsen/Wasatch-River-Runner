@@ -23,7 +23,6 @@ class MapModal extends React.Component {
   }
 
   getClassName(gauge, low, medium, high) {
-    console.log(gauge, low, medium, high)
     if (gauge === "") {
       return 'no-gauge'
     }
@@ -39,7 +38,7 @@ class MapModal extends React.Component {
     if (gauge >= high) {
       return 'high'
     }
-  
+
   }
 
   render() {
@@ -47,21 +46,21 @@ class MapModal extends React.Component {
       <div>
         <Button id={this.getClassName(this.props.gauge, this.props.low, this.props.medium, this.props.high)} color="primary" onClick={this.toggle}>{this.props.gauge} cfs</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} size="sm">
-        <Card body id={this.getClassName(this.props.gauge, this.props.low, this.props.medium, this.props.high)}>
-    <CardTitle><Link to={"/" + this.props.id}>
-        <strong>
-          {this.props.riverName + " " + this.props.section + "  Class: " + this.props.difficulty}
-        </strong>
-      </Link></CardTitle>
-    <CardText> <strong>{"Gauge Name:  " + this.props.gaugeName}</strong></CardText>
-    <GaugeModal
-        buttonLabel={this.props.gauge}
-        data={this.props.data}
-        title={this.props.gaugeName}
-      />
-  </Card>
-  <ModalFooter>
-  
+          <Card body id={this.getClassName(this.props.gauge, this.props.low, this.props.medium, this.props.high)}>
+            <CardTitle><Link to={"/" + this.props.id}>
+              <strong>
+                {this.props.riverName + " " + this.props.section + "  Class: " + this.props.difficulty}
+              </strong>
+            </Link></CardTitle>
+            <CardText> <strong>{"Gauge Name:  " + this.props.gaugeName}</strong></CardText>
+            <GaugeModal
+              buttonLabel={this.props.gauge}
+              data={this.props.data}
+              title={this.props.gaugeName}
+            />
+          </Card>
+          <ModalFooter>
+
             <Button color="secondary" onClick={this.toggle}>Close</Button>
           </ModalFooter>
         </Modal>

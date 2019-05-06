@@ -23,20 +23,20 @@ export function RiverTable({ children }) {
     </tbody>
   </Table>
 }
-function getClassName(gauge, low, medium, high) {
-  if (gauge === "") {
+function getClassName(level, low, medium, high) {
+  if (level === "") {
     return 'no-gauge'
   }
-  if (gauge <= low) {
+  if (level <= low) {
     return 'lowest'
   }
-  if (gauge > low && gauge < medium) {
+  if (level > low && level < medium) {
     return 'low'
   }
-  if (gauge >= medium && gauge < high) {
+  if (level >= medium && level < high) {
     return 'medium'
   }
-  if (gauge >= high) {
+  if (level >= high) {
     return 'high'
   }
 
@@ -53,10 +53,11 @@ export function RiverTableItem({
   high,
   id,
   title,
-  data
+  data,
+  level
 }) {
   return (
-    <tr className={getClassName(gauge, low, medium, high)} id="table">
+    <tr className={getClassName(level, low, medium, high)} id="table">
       <td> <Link id="link" to={"/" + id}>
         <strong>
           {riverName}
@@ -64,13 +65,15 @@ export function RiverTableItem({
       </Link></td>
       <td>{section}</td>
       <td>{difficulty}</td>
-      <td><GaugeModal
-        buttonLabel={gauge}
+      <td>{gauge !== "none" ? <GaugeModal
+        buttonLabel={level}
         data={data}
         title={title}
-      />
+      /> : <a href={data} target="blank">
+       {"flow link"}
+       </a>}
       </td>
-      <td><Moment fromNow>{updated}</Moment></td>
+      <td>{updated}</td>
     </tr>
   );
 }
