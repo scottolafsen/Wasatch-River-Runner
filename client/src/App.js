@@ -5,12 +5,15 @@ import RiverMap from "./pages/RiverMap";
 import River from "./pages/River";
 import NoMatch from "./pages/NoMatch";
 import NavBar from "./components/NavigationBar";
+require('dotenv').config()
 
+const API_KEY = `${process.env.REACT_APP_API_KEY}`
+console.log(API_KEY)
 function App() {
   return (
     <Router>
       <div>
-      <NavBar />
+        <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/rivermap" component={RiverMap} />
